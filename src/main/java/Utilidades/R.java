@@ -1,5 +1,8 @@
 package Utilidades;
 
+import java.io.File;
+import java.net.URL;
+
 public class R {
 
     public static void bucleHilo(String texto, double segundos) {
@@ -21,6 +24,17 @@ public class R {
 
         }
 
+    }
+
+
+
+    /**
+     * Devuelve la URL donde se encuentra el fxml
+     * @param nombre
+     * @return
+     */
+    public static URL getURL(String nombre) {
+        return Thread.currentThread().getContextClassLoader().getResource("interfaz" + File.separator + nombre);
     }
 
 }

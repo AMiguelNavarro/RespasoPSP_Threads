@@ -1,4 +1,4 @@
-package join;
+package repasoTeoriaThreads.join;
 
 import Hilos.Hilo;
 
@@ -10,7 +10,7 @@ public class Principal {
         Hilo hilo2 = new Hilo("segundo");
 
         /**
-         * Con los join se controla la prioridad
+         * Con los repasoTeoriaThreads.join se controla la prioridad
          */
         hilo1.start();
         try {

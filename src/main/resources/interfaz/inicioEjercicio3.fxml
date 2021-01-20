@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="540.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="118.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CARRERA DE COCHES !!!" textAlignment="CENTER" wrappingWidth="367.9609375">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Label layoutX="55.0" layoutY="73.0" text="Nombre del coche" />
+            <TextField layoutX="170.0" layoutY="69.0" prefHeight="17.0" prefWidth="195.0" />
+            <Label layoutX="55.0" layoutY="113.0" text="Velocidad (km/h)" />
+            <TextField layoutX="170.0" layoutY="109.0" prefHeight="25.0" prefWidth="81.0" />
+            <ScrollPane layoutX="21.0" layoutY="172.0" prefHeight="259.0" prefWidth="560.0">
+               <content>
+                  <VBox prefHeight="259.0" prefWidth="561.0" />
+               </content>
+            </ScrollPane>
+            <Button fx:id="btStart" layoutX="237.0" layoutY="449.0" mnemonicParsing="false" onAction="#iniciarCarrera" prefHeight="65.0" prefWidth="127.0" text="START">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="btAnadir" layoutX="395.0" layoutY="69.0" mnemonicParsing="false" onAction="#insertarCoche" prefHeight="65.0" prefWidth="149.0" text="Añadir">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

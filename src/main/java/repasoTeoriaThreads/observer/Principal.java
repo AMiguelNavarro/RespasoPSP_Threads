@@ -1,4 +1,4 @@
-package observer;
+package repasoTeoriaThreads.observer;
 
 public class Principal {
     public static void main(String[] args) {

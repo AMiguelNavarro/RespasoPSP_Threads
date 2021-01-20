@@ -1,4 +1,4 @@
-package alive;
+package repasoTeoriaThreads.alive;
 
 import Hilos.Hilo;
 

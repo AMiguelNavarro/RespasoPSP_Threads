@@ -1,4 +1,4 @@
-package observer;
+package repasoTeoriaThreads.observer;
 
 import java.util.ArrayList;
 import java.util.Observable;
