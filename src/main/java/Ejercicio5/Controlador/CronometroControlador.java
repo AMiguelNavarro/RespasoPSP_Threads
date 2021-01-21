@@ -19,7 +19,7 @@ public class CronometroControlador implements Initializable {
     public Label lbProgreso;
     public ProgressBar pbProgreso;
     public TextField tfNumero;
-    public Button btIniciar, btParar;
+    public Button btIniciar, btParar, btReanudar;
 
     private int numero;
     private CronometroTask task;
@@ -34,6 +34,7 @@ public class CronometroControlador implements Initializable {
 
     @FXML
     public void iniciar(Event event) {
+
 
         vistaContadorIniciado(true);
 
@@ -61,13 +62,19 @@ public class CronometroControlador implements Initializable {
 
     @FXML
     public void parar(Event event) {
-        task.cancel();
-
+        task.setPausado(true);
         vistaContadorIniciado(false);
+    }
+
+    @FXML
+    public void reanudar(Event event) {
+        task.setPausado(false);
+        vistaContadorIniciado(true);
     }
 
     public void vistaContadorIniciado(boolean desactivar) {
         btIniciar.setDisable(desactivar);
+        btReanudar.setDisable(desactivar);
         btParar.setDisable(!desactivar);
     }
 

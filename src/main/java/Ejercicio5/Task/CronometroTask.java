@@ -5,6 +5,7 @@ import javafx.concurrent.Task;
 public class CronometroTask extends Task<Void> {
 
     private int numero;
+    private boolean pausado = false;
 
     public CronometroTask(int numero) {
         this.numero = numero;
@@ -20,6 +21,10 @@ public class CronometroTask extends Task<Void> {
 
         for (int i = 1; i <= numero; i++) {
 
+            while (pausado) {
+                Thread.sleep(1000);
+            }
+
             progreso = i;
             porcentaje = progreso * 100 / numero;
 
@@ -29,5 +34,10 @@ public class CronometroTask extends Task<Void> {
         }
 
         return null;
+    }
+
+
+    public void setPausado(boolean pausado) {
+        this.pausado = pausado;
     }
 }
