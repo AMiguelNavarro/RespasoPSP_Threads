@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="217.0" prefWidth="230.0">
+         <children>
+            <TextField fx:id="tfNumero" layoutX="90.0" layoutY="37.0" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="73.0" layoutY="14.0" text="CUENTA ATRÁS" />
+            <Separator layoutX="15.0" layoutY="75.0" prefWidth="200.0" />
+            <Label fx:id="lbNumero" layoutX="-2.0" layoutY="97.0" prefHeight="46.0" prefWidth="230.0" style="-fx-alignment: center;" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Nova Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btIniciar" layoutX="74.0" layoutY="162.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="25.0" prefWidth="84.0" text="INICIAR">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
