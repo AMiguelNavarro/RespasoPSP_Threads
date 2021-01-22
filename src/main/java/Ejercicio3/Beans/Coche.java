@@ -35,4 +35,8 @@ public class Coche {
         this.distanciaRecorrida = distanciaRecorrida;
     }
 
+    public void iniciarCarrera() {
+
+    }
+
 }

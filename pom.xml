@@ -87,9 +87,10 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
-<!--                    <mainClass>Ejercicio3.App</mainClass>-->
+                    <mainClass>Ejercicio3.App</mainClass>
 <!--                    <mainClass>Ejercicio4.App</mainClass>-->
-                    <mainClass>Ejercicio5.App</mainClass>
+<!--                    <mainClass>Ejercicio5.App</mainClass>-->
+<!--                    <mainClass>EjerciciosExamen.Ejercicio1.App</mainClass>-->
                 </configuration>
             </plugin>
         </plugins>

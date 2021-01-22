@@ -2,6 +2,7 @@ package Ejercicio3.Controlador;
 
 import Ejercicio3.Beans.Coche;
 import Ejercicio3.Hilo.CarreraTask;
+import Utilidades.Alertas;
 import Utilidades.R;
 import javafx.concurrent.Worker;
 import javafx.event.Event;
@@ -23,30 +24,27 @@ public class InicioControlador {
     public Label lbDistancia;
     public VBox layout;
 
-    private int distanciaCircuito;
+    public static int distanciaCircuito;
     private int velocidad;
-    private ArrayList<Coche> listaCoches = new ArrayList<>();
+    private ArrayList<ScrollPaneCochesControlador> listaControladores = new ArrayList<>();
     private ScrollPaneCochesControlador controlador;
 
     @FXML
     public void iniciarCarrera(Event event) {
 
-        for (Coche coche : listaCoches) {
-            CarreraTask task = new CarreraTask(coche, distanciaCircuito);
-
-            task.stateProperty().addListener((observableValue, viejoEstado, nuevoEstado) -> {
-                if (nuevoEstado == Worker.State.RUNNING) {
-
-                }
-            });
-
-            new Thread(task).start();
+        for(ScrollPaneCochesControlador controlador : listaControladores) {
+            controlador.iniciarCarrera();
         }
 
     }
 
     @FXML
     public void insertarCoche(Event event) {
+
+        if (listaControladores.size() == 4) {
+            Alertas.mostrarInformacion("No puedes añadir más de 4 coches");
+            return;
+        }
 
         String nombre = tfNombreCoche.getText();
         velocidad = Integer.parseInt(tfVelocidad.getText());
@@ -64,13 +62,13 @@ public class InicioControlador {
 
             layout.getChildren().add(root);
 
+            listaControladores.add(controlador);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         limpiarTextFields();
-
-        listaCoches.add(coche);
 
     }
 
